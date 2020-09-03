@@ -1,6 +1,7 @@
 import React from 'react'
 import {StyleSheet} from 'react-native'
-import { Card} from 'react-native-paper'
+
+import Card from "react-native-paper/lib/commonjs/components/Card/Card"
 
 const ProductCarousel = ({image})=>{
     return(

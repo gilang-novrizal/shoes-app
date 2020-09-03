@@ -1,9 +1,12 @@
 import React from "react"
 import {useSelector, useDispatch} from "react-redux"
-import {View, Image, StyleSheet} from "react-native"
-import {Text, Button, Avatar} from "react-native-paper"
+import {View, Text, Image, StyleSheet} from "react-native"
+
+import Button from "react-native-paper/lib/commonjs/components/Button"
+import Avatar from "react-native-paper/lib/commonjs/components/Avatar/Avatar"
+
 import { getProfile, logoutAction } from "../action"
-import AsyncStorage from "@react-native-community/async-storage"
+
 import {Ava} from "../img"
 
 

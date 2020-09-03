@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {View, StyleSheet, FlatList, Dimensions} from 'react-native'
-import {Text} from 'react-native-paper'
+import {View,Text, StyleSheet, FlatList, Dimensions} from 'react-native'
 import Carousel from 'react-native-snap-carousel'
 
 // import action
@@ -41,7 +40,8 @@ class Home extends React.Component{
                 image={item.images[0]}
                 harga={item.price}
                 brand={item.brand}
-                rating={item.rating}/>
+                rating={item.rating}
+                onTouch={()=> this.props.navigation.navigate('ProductDetails',{ product: item})}/>
             )
         }
     }

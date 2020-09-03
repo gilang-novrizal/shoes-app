@@ -21,3 +21,9 @@ export const KEEP_LOGIN = "KEEP_LOGIN"
 
 export const LOG_OUT = "LOG_OUT"
 
+export const CART_START = "CART_START"
+export const GET_CART = "GET_CART"
+export const CART_END = "CART_END"
+
+export const GET_TOTAL = "GET_TOTAL"
+

@@ -1,7 +1,9 @@
 import React from "react"
 import {useSelector, useDispatch} from "react-redux"
-import { View, StyleSheet } from "react-native"
-import { Text, TextInput, Button } from "react-native-paper"
+import { View, Text, StyleSheet } from "react-native"
+
+import TextInput from "react-native-paper/lib/commonjs/components/TextInput/TextInput"
+import Button from "react-native-paper/lib/commonjs/components/Button"
 
 import {registerAction} from "../action"
 

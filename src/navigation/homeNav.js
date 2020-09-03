@@ -3,8 +3,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons'
 
-import Home from "../screen/home"
+
 import Account from "../screen/account"
+import Cart from "../screen/cart"
+import ProductNav from "./productNav"
 
 
 const Wallet = ()=>{
@@ -16,13 +18,6 @@ const Wallet = ()=>{
 }
 
 
-const Cart = () =>{
-    return(
-        <View>
-            <Text>Cart</Text>
-        </View>
-    )
-}
 const Tab = createBottomTabNavigator()
 
 const HomeNavigation = ()=>{
@@ -32,7 +27,7 @@ const HomeNavigation = ()=>{
         tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === 'Home') {
+            if (route.name === 'Product-Nav') {
                 iconName = focused ? 'home' : 'home-outline';
             } else if (route.name === 'Wallet') {
                 iconName = focused ? 'wallet' : 'wallet-outline';
@@ -46,7 +41,7 @@ const HomeNavigation = ()=>{
             return <Icon name={iconName} size={size} color={color} />;
         },
     })}>
-        <Tab.Screen name="Home" component={Home}/>
+        <Tab.Screen name="Product-Nav" component={ProductNav}/>
         <Tab.Screen name="Cart" component={Cart}/>
         <Tab.Screen name="Wallet" component={Wallet}/>
         <Tab.Screen name="Account" component={Account}/>

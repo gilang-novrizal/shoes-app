@@ -10,9 +10,9 @@ export const loginAction = (body)=>{
             console.log(body)
             const res = await Axios.post(URL + "/api/login", body)
             console.log(res.data)
+            dispatch({type: LOGIN, payload: res.data})
             await AsyncStorage.setItem("token", res.data.token)
             await AsyncStorage.setItem("id", res.data.user_id.toString())
-            dispatch({type: LOGIN, payload: res.data})
 
             dispatch({type: LOGIN_END})
         } catch (error) {

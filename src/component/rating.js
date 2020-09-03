@@ -1,13 +1,14 @@
 import React from 'react'
 import {View, StyleSheet} from 'react-native'
-import {List} from 'react-native-paper'
+
+import ListIcon from "react-native-paper/lib/commonjs/components/List/ListIcon"
 
 const RatingStar = ({number})=>{
     const renderStar = ()=>{
         let stars = []
         for (let i =0; i< number; i++){
             stars.push(
-                <List.Icon
+                <ListIcon
                 key={i}
                 color="#f1c40f"
                 icon="star"
